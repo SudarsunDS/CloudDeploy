@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CloudDeploy</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #0f62fe;
+        }
+
+        .status {
+            color: #198038;
+            font-weight: bold;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        code {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>☁️ CloudDeploy</h1>
+
+    <p>
+        Cloud-Native Container Deployment using
+        Docker and IBM Code Engine
+    </p>
+
+    <p class="status">
+        ● Application Successfully Deployed
+    </p>
+
+
+    <div class="card">
+
+        <h3>Deployment Information</h3>
+
+        <p>
+            <strong>Environment:</strong>
+            {{ info.environment }}
+        </p>
+
+        <p>
+            <strong>Platform:</strong>
+            {{ info.platform }}
+        </p>
+
+        <p>
+            <strong>Container Host:</strong>
+            <code>{{ info.hostname }}</code>
+        </p>
+
+        <p>
+            <strong>Deployment Time:</strong>
+            {{ info.timestamp }}
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Architecture</h3>
+
+        <p>
+            Flask Application
+            → Docker Container
+            → IBM Cloud Container Registry
+            → IBM Code Engine
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
